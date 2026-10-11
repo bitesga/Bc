@@ -143,6 +143,8 @@ class MyDiscordBot(commands.Bot):
         
 
 intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
 bot = MyDiscordBot(intents=intents)   
 bot.remove_command('help')
 with open("jsons/env.json", "r") as f:
